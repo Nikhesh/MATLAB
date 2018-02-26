@@ -1,0 +1,20 @@
+clc
+clear all
+close all
+t=linspace(0,1,100);
+x=sin(2*pi*5*t);    %Input signal
+n=rand(1,length(x));
+x1=x+n; %Corrupted signal
+M1=3;
+M2=5;
+M3=7;
+h1=1/M1*ones(1,M1);
+h2=1/M2*ones(1,M2);
+h3=1/M3*ones(1,M3);
+y1=filter(h1,1,x1);
+y2=filter(h2,1,x1);
+y3=filter(h3,1,x1);
+subplot(2,2,1),plot(t,x),
+subplot(2,2,2),plot(t,x1),
+subplot(2,2,3),plot(t,y1),
+subplot(2,2,4),plot(t,y3),

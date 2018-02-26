@@ -1,0 +1,19 @@
+%To design a notch filter
+clc
+clear all
+close all
+%Step 1: Generate composite signal
+fs=8000;
+f1=500;
+f2=1000;
+f3=1500;
+input=[1,zeros(1,8999)]; %Input to resonator
+
+%Step 2: Notch filter design
+fnotch=1500;
+w=2*pi*(fnotch)/fs;
+num=[1,-2*cos(w),1];
+den=1;
+y=filter(num,den,x);
+freqz(num,den,1024,fs),figure,zplane(num,den)
+% soundsc(x),pause,soundsc(y)
