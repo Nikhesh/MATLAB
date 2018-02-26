@@ -1,0 +1,11 @@
+clc
+clear all
+close all
+t=linspace(0,1,1000);
+f1=100;
+f2=200;
+x1=sin(2*pi*f1*t);
+x2=sin(2*pi*f2*t);
+x=[x1,x
+x2=sin(2*pi*f*t.^2);
+soundsc(x2)

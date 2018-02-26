@@ -1,0 +1,12 @@
+%Circular folding of x(n)
+clc
+clear all
+close all
+x=1:4;
+N=length(x);
+n=0:N-1;
+%To find circularly folded version of x(n)
+y=x(mod(-n,N)+1); %Circular folding
+%Plotting the result
+subplot(2,1,1),stem(n,x,'filled','b','linewidth',2)
+subplot(2,1,2),stem(n,y,'filled','r','linewidth',2)

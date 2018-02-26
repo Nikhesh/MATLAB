@@ -1,0 +1,12 @@
+%Convolution of x[n] with delta[n]
+clc
+clear all
+close all
+%Step 1: Generation of x[n]:sine wave
+t=linspace(0,1,100);
+x=sin(2*pi*5*t);
+%Step 2: Generation of delta(n)
+h=[1,zeros(1,99)];
+%Step 3: Perform the convolution
+
+stem(h)

@@ -1,0 +1,22 @@
+%Test for linearity of DT system
+clc
+clear all
+close all
+%Step 1: Two signals x1 and x2
+n=-10:10;
+w1=0;
+w2=pi;
+x1=exp(j*w1*n); %DC signal
+x2=exp(j*w2*n); %High frequency signal
+%Step 2: Define the system
+A=2;
+y1=A.*x1;
+y2=A.*x2;
+ys=A.*(x1+x2);
+yp=y1+y2;
+if(ys
+
+
+
+subplot(2,1,1),stem(n,x1,'filled','b','linewidth',2)
+subplot(2,1,2),stem(n,x2,'filled','r','linewidth',2)

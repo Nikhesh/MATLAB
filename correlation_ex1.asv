@@ -1,0 +1,9 @@
+%ACF of a sine wave
+clc
+clear all
+close all
+%Generate sine wave of 5 Hz frequency
+t=linspace(0,1,100);
+x=sin(2*pi*5*t);
+y=conv(x,fliplr(x);
+plot(y)

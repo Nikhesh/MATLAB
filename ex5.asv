@@ -1,0 +1,9 @@
+%To generate DC and high frequency signal
+n=-10:10;
+w1=0;
+w2=pi;
+x1=exp(j*w1*n);
+x2=exp(j*w2*n);
+subplot(2,1,1),stem(n,x1,'filled'),
+xlabel('n'),ylabel('Amplitude'),title('x_
+subplot(2,1,2),stem(n,x2,'filled')
