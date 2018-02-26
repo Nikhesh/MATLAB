@@ -1,0 +1,11 @@
+clc
+clear all
+close all
+input=imread('rice.png');
+% h1=[0.1447,0.2678,0.3183,0.2678,0.1447];
+% h2=[-0.1447,-0.2678,0.681,-0.2678,-0.1447];
+h1=fir1(11,1);
+h2=fir1(11,1,'high');
+y1=conv2(input,h1,'same');
+y2=conv2(input,h2,'same');
+imshow(input),figure,imshow(uint8(y1)),figure,imshow(y2)

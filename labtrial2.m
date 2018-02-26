@@ -1,0 +1,14 @@
+%To know the importance of magnitude and phase of FT
+clc
+clear all
+close all
+t=0:0.01:1;
+x=sin(2*pi*5*t); %signal
+X=fft(x,length(x)); %Spectrum
+r1=ifft(abs(X));
+r2=ifft(angle(X));
+r3=ifft(abs(X).*exp(i*angle(X)));
+subplot(2,2,1),plot(t,x)
+subplot(2,2,2),plot(t,r1)
+subplot(2,2,3),plot(t,r2)
+subplot(2,2,4),plot(t,r3)

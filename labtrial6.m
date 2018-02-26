@@ -1,0 +1,25 @@
+clc
+clear all
+close all
+%Signal generation
+t=0:0.01:3.02;
+f1=2;
+f2=20;
+x1=sin(2*pi*f1*[0:0.01:1]);
+x2=sin(2*pi*f2*[0:0.01:1]);
+x3=zeros(1,length(x1));
+x=[x1,x3,x2];
+%Filter
+fc=10;
+fs=100;
+fn=fs/2;
+w=fc/fn;
+h=fir1(101,w,'high');
+% output signal
+y=conv(x,h);
+plot(t,x),title('Input signal')
+figure,plot(t,y(1:length(t))),title('Output signal')
+
+
+
+

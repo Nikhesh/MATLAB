@@ -1,0 +1,8 @@
+%Histogram of rand function
+clc
+clear all
+close all
+x=rand(10000,1);
+[p,q]=hist(x,100);
+sub
+bar(q,p) %Plotting the histogram

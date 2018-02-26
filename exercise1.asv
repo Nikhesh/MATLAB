@@ -1,0 +1,13 @@
+clc
+clear all
+close all
+n=-10:10
+x1=(n==0);
+E1=ener(x1);
+x2=((n==0)-(n==-5));
+E1=ener(x1);
+x3=((n==0)-(n==1)+(n==2));
+x4=((n>=0)-(n>=3));
+
+stem(n,x4,'filled')
+E

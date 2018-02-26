@@ -1,0 +1,13 @@
+%Impact of  MA  filter
+clc
+clear all
+close all
+t=linspace(0,1,100);
+f=5;
+x=sin(2*pi*f*t);    %Clean signal
+w=rand(1,length(x));    %Noise
+x1=x+w;     %Corrupted signal
+%Apply MA filter to smoothen the signal
+
+subplot(2,1,1),plot(t,x),
+subplot(2,1,2),plot(t,x1)
