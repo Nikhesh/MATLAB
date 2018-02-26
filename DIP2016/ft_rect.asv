@@ -1,0 +1,17 @@
+%CSFT of a rectangular function
+clc
+clear all
+close all
+%To generate 2D rectangular function
+rec=zeros(256);
+rec(110:150,110:150)=1;
+%To obtain the FT
+REC=fftshift((rec));
+%Step1: Read an image
+im=imread('cameraman.tif');
+IM=fft2(im);
+Y=IM.*REC;
+y=ifft2(Y);
+imshow(uint8(y))
+
+imshow(rec),figure,imshow((REC),[])

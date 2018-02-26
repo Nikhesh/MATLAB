@@ -1,0 +1,14 @@
+%Example 1: Generation of sine wave
+clc
+clear all
+close all
+t=linspace(0,1,100) % time vector
+A=1;
+f=5;
+phi=0;
+x=A*sin(2*pi*f*t+phi);
+y=A*cos(2*pi*f*t+phi);
+%Plot the sine wave
+plot(t,x,t,y),xlabel('t'),ylabel('Amplitude')
+title(['Sine wave with frequency',num2str(f) 'Hz']),
+legend('Sine','Cosine')

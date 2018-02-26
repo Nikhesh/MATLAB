@@ -1,0 +1,14 @@
+%Identity transformation
+clc
+clear all
+close all
+%Step 1: Create the identity transformation
+t=[];
+for x=0:255
+    if (x<255)
+        t=[t,x];
+    end
+end
+% plot(t)
+%Step2: Apply the transformation to the input image
+im=imread('cameraman.ti

@@ -1,0 +1,17 @@
+clc
+clear all
+close all
+t=linspace(0,1,1000);
+t1=linspace(0,1,999);
+x=sin(2*pi*5*t);
+y=(x>=0);
+z=diff(y);
+l1=length(x);
+l2=length(z);
+l=min(l1,l2);
+for i=1:l
+    p(i)=x(i)+z(i);
+end
+
+% subplot(2,1,1),plot(t,x),
+% subplot(2,1,2),plot(t,y),axis([0 1 -2 2])

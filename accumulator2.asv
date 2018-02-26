@@ -1,0 +1,13 @@
+%Accumulator inters of H(z)
+clc
+clear all
+close all
+%Parameters to be defined
+num=[1];
+den=[1,-1];
+%Define the input
+n=-10:10;
+x=(n==0);
+%To obtain the output of the system
+y=
+%zplane(num,den)

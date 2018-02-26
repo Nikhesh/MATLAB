@@ -1,0 +1,12 @@
+%Histogram of different images
+clc
+clear all
+close all
+im=150*uint8(ones(256));
+im(:,1:128)=100;
+im1=150*uint8(ones(256));
+im1(1:128,:)=100;
+subplot(2,2,1),imshow(im1),
+subplot(2,2,2),imhist(im1)
+subplot(2,2,3),imshow(im1),
+subplot(2,2,2),imhist(im1)

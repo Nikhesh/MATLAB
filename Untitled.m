@@ -1,8 +1,12 @@
+%HWR and FWR
+
 clc
 clear all
 close all
-x1=ones(1,5);
-x2=zeros(1,10);
-x=[x1,x2];
-y=repmat(x,[1,16]);
-plot(y),axis([0 240 -2 2])
+t=linspace(0,1,100);
+s1=sin(2*pi*5*t);
+s2=sin(2*pi*5*t+15);
+y=xcorr(s1,s1);
+plot(y),figure,
+z=crosscorr(s1,s2);
+plot(z)

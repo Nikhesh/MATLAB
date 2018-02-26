@@ -1,0 +1,9 @@
+%Fourier transform of a vertical line
+clc
+clear all
+close all
+%Vertical line
+im=zeros(256);
+im(:,128)=255;
+IM=fftshift(fft2(abs(im))
+imshow(im)

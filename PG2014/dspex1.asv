@@ -1,0 +1,9 @@
+%To generate 1Hz sine wave
+clc
+clear all
+close all
+t=linspace(0,1,100); %time vector
+A=1;%Amplitude of the signal
+f=1; %Frequency of the signal
+x=A*sin(2*pi*f*t);
+plot(t,x),xlabel
